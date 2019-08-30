@@ -14,7 +14,7 @@ public class CommandTest implements CommandExecutor {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		eco.depositPlayer(args[0], 100);
+		eco.depositPlayer(args[0], Double.valueOf(args[1]));
 		return true;
 	}
 

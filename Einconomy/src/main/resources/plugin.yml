@@ -1,0 +1,18 @@
+name: Einconomy
+api-version: 1.14
+version: 1.0
+softdepend: [Vault]
+description: Eco plugin by einstein8612
+author: einstein8612
+ 
+main: io.github.einstein8612.einconomy.Einconomy
+commands:
+  bal:
+    description: Bal command
+    usage: /<command>
+  test:
+    description: test command
+    usage: /<command>
+  pay:
+    description: Pay command
+    usage: /<command> [Target]

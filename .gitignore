@@ -1,0 +1,10 @@
+
+Einconomy/.classpath
+Einconomy/.project
+*.prefs
+Einconomy/build.gradle
+Einconomy/gradle/wrapper/gradle-wrapper.jar
+Einconomy/gradle/wrapper/gradle-wrapper.properties
+Einconomy/gradlew
+*.bat
+Einconomy/settings.gradle

@@ -1,0 +1,10 @@
+mustBePlayer: "You can't execute this command! It's for players only!"
+viewBalance: "&6&lB&f&lalance: &6{BALANCE}"
+viewBalanceOthers: "&6&lB&f&lalance of &6&l{TARGETNAME}: &6{TARGETBALANCE}"
+noMoney: "&6&lY&f&lou don't have enough money to pay that amount."
+havePaid: "&6&lY&f&lou've paid &6{TARGETNAME} &f$&6{AMOUNT} &fDollars."
+haveBeenPaid: "&6&lY&f&lou've been paid $&6{AMOUNT} &rby &6{NAME}"
+noMoney: "&6&lY&f&lou don't have enough money to pay this amount."
+syntaxError: "&cSyntax error! Please use the following format: "
+Economy:
+   symbol: "$"

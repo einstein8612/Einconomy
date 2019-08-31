@@ -24,29 +24,22 @@ public class CommandPay implements CommandExecutor {
 			} else {
 				if (Common.getPlayer(args[0]) != null) {
 					final Player target = Common.getPlayer(args[0]);
-					if (Common.checkAccount(target)) {
-						if (Common.isNumeric(args[1])) {
-							if (Double.valueOf(args[1]) > 0) {
-								final double amount = Double.valueOf(args[1]);
-
-								if (plugin.getDm().getEco().getDouble("Players." + player.getUniqueId().toString()) > amount) {
-									eco.depositPlayer(target, amount);
-									eco.withdrawPlayer(player, amount);
-									Common.tell(player, Common.resolvePlaceholders(player, target, plugin.getConfig().getString("havePaid").replace("{AMOUNT}", String.valueOf(amount))));
-									Common.tell(target, Common.resolvePlaceholders(player, target, plugin.getConfig().getString("haveBeenPaid").replace("{AMOUNT}", String.valueOf(amount))));
-								} else {
-									player.sendMessage("fr?");
-									Common.tell(player, Common.resolvePlaceholders(player, target, plugin.getConfig().getString("noMoney")));
-								}
+					if (Common.isNumeric(args[1])) {
+						if (Double.valueOf(args[1]) > 0) {
+							final double amount = Double.valueOf(args[1]);
+							if (plugin.getDm().getEco().getDouble("Players." + player.getUniqueId().toString()) > amount) {
+								eco.depositPlayer(target, amount);
+								eco.withdrawPlayer(player, amount);
+								Common.tell(player, Common.resolvePlaceholders(player, target, plugin.getConfig().getString("havePaid").replace("{AMOUNT}", String.valueOf(amount))));
+								Common.tell(target, Common.resolvePlaceholders(player, target, plugin.getConfig().getString("haveBeenPaid").replace("{AMOUNT}", String.valueOf(amount))));
 							} else {
-								player.sendMessage("Dont use -1");
+								Common.tell(player, Common.resolvePlaceholders(player, target, plugin.getConfig().getString("noMoney")));
 							}
 						} else {
-							Common.tell(player, Common.resolvePlaceholders(player, target, plugin.getConfig().getString("syntaxError") + "/pay <player> <amount>"));
+							Common.tell(player, Common.resolvePlaceholders(player, target, plugin.getConfig().getString("invalidAmount")));
 						}
 					} else {
-						plugin.getDm().getEco().set("Players." + target.getUniqueId().toString(), 0);
-						Common.tell(player, Common.resolvePlaceholders(player, target, plugin.getConfig().getString("viewBalanceOthers")));
+						Common.tell(player, Common.resolvePlaceholders(player, target, plugin.getConfig().getString("invalidAmount")));
 					}
 				} else {
 					Common.tell(player, Common.resolvePlaceholders(player, null, plugin.getConfig().getString("syntaxError") + "/pay <player> <amount>"));

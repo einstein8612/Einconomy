@@ -6,5 +6,12 @@ havePaid: "&6&lY&f&lou've paid &6{TARGETNAME} &f$&6{AMOUNT} &fDollars."
 haveBeenPaid: "&6&lY&f&lou've been paid $&6{AMOUNT} &rby &6{NAME}"
 noMoney: "&6&lY&f&lou don't have enough money to pay this amount."
 syntaxError: "&cSyntax error! Please use the following format: "
+ecoSender: "&6&lY&f&lou've changed &6{TARGET}&f's balance to &6${AMOUNT}"
+ecoTarget: "&6&lY&f&lour balance has been changed to &6${AMOUNT} &fby &6{NAME}"
+noPerm: "&cYou don't have the permission required to run this command."
+invalidAmount: "&cThat's an invalid amount!"
+invalidPlayer: "&cPlayer not found!"
+ecoHelp: "&6&lA&f&lvailable arguments: &6add&f, &6set&f, &6remove&f."
 Economy:
+   startBalance: 100
    symbol: "$"

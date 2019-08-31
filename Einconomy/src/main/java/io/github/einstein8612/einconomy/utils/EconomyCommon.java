@@ -20,6 +20,20 @@ public class EconomyCommon {
 		Player player = Common.getPlayer(playername);
 		return (this.getBalance(player));
 	}
+	
+	public boolean setBalance(OfflinePlayer player, double amount) {
+		dm.getEco().set("Players." + player.getUniqueId().toString(), amount);
+		return true;
+	}
+	
+	public boolean setBalance(String playername, double amount) {
+		if (Common.getPlayer(playername) == null) {
+			return false;
+		}
+		final Player player = Common.getPlayer(playername);
+		dm.getEco().set("Players." + player.getUniqueId().toString(), amount);
+		return true;
+	}
 
 	public boolean depositPlayer(OfflinePlayer player, double amount) {
 		final double oldMoney = getBalance(player);

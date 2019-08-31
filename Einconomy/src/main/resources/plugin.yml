@@ -16,3 +16,6 @@ commands:
   pay:
     description: Pay command
     usage: /<command> [Target]
+  eco:
+    description: Einconomy admin command
+    usage: /<command> <add | set | remove> <player> [amount]

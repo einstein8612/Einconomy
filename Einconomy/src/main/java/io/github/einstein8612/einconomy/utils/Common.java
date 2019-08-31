@@ -69,15 +69,17 @@ public class Common {
 
 	public String resolvePlaceholders(Player player, Player target, String message) {
 		EconomyCommon eco = new EconomyCommon();
-		
+		if (player != null) {
 		message = message.replace("{DISPLAYNAME}", player.getDisplayName());
 		message = message.replace("{NAME}", player.getName());
+		message = message.replace("{BALANCE}", String.valueOf(eco.getBalance(player)));
+		}
 		if (target != null) {
 			message = message.replace("{TARGETNAME}", target.getName());
 			message = message.replace("{TARGETDISPLAYNAME}", target.getName());
 			message = message.replace("{TARGETBALANCE}", String.valueOf(eco.getBalance(target)));
 		}
-		final String finMessage = message.replace("{BALANCE}", String.valueOf(eco.getBalance(player)));
+		final String finMessage = message;
 		return finMessage;
 		
 	}

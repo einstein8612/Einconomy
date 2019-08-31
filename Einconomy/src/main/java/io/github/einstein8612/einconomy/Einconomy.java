@@ -1,8 +1,10 @@
 package io.github.einstein8612.einconomy;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import io.github.einstein8612.einconomy.commands.CommandBal;
+import io.github.einstein8612.einconomy.commands.CommandEco;
 import io.github.einstein8612.einconomy.commands.CommandPay;
 import io.github.einstein8612.einconomy.commands.CommandTest;
 import io.github.einstein8612.einconomy.utils.DataManager;
@@ -34,10 +36,10 @@ public class Einconomy extends JavaPlugin {
 		//-----------
 		getCommand("bal").setExecutor(new CommandBal());
 		getCommand("pay").setExecutor(new CommandPay());
+		getCommand("eco").setExecutor(new CommandEco());
 		getCommand("test").setExecutor(new CommandTest());
 		
-		
-		
+		Bukkit.getPluginManager().registerEvents(new JoinQuitListener(), this);
 	}
 	@Override
 	public void onDisable() {

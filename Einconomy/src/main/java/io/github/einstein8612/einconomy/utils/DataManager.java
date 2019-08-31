@@ -57,6 +57,7 @@ public class DataManager {
 	public void reloadConfig(CommandSender sender) {
 		try {
 			ecocfg.load(ecofile);
+			plugin.reloadConfig();
 			//TODO: reload bukkit config?
 			Common.log("Reloaded config!");
 			Common.tell(sender, "All config files have been reloaded");

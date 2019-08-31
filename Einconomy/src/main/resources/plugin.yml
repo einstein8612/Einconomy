@@ -16,6 +16,9 @@ commands:
   pay:
     description: Pay command
     usage: /<command> [Target]
+  baltop:
+    description: baltop command
+    usage: /<command>
   eco:
     description: Einconomy admin command
     usage: /<command> <add | set | remove> <player> [amount]

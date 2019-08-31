@@ -12,7 +12,7 @@ noPerm: "&cYou don't have the permission required to run this command."
 invalidAmount: "&cThat's an invalid amount!"
 invalidPlayer: "&cPlayer not found!"
 ecoHelp: "&6&lA&f&lvailable arguments: &6add&f, &6set&f, &6remove&f."
-baltopHeader: "&6&lB&f&lalance Top:"
+baltopHeading: "&6&lB&f&lalance Top:"
 baltopLine: "&f[&6{NUMBER}&f] &6{NAME}&f: &6{BALANCE}"
 Economy:
    baltopShown: 10

@@ -56,6 +56,7 @@ public class CommandBaltop implements CommandExecutor {
 	private void sendSortedBanks(CommandSender sender, ArrayList<PlayerBankObject> playerBanks) {
 		Collections.sort(playerBanks);
 		int i = 1;
+		common.tell(sender, plugin.getConfig().getString("baltopHeading"));
 		for (PlayerBankObject object : playerBanks) {
 			common.tell(sender, plugin.getConfig().getString("baltopLine")
 					.replace("{NAME}", object.getName())

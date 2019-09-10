@@ -1,5 +1,7 @@
 package io.github.einstein8612.einconomy.commands;
 
+import java.text.DecimalFormat;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -14,8 +16,9 @@ public class CommandTest implements CommandExecutor {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		eco.depositPlayer(args[0], Double.valueOf(args[1]));
+		//plugin.getDm().getEco().set("Players.fe8994fa-1391-4145-a314-3038a11c9d3f", currencyFormat.format(100000000));
+		
+		System.out.println(plugin.getDm().getEco().getDouble("Players.fe8994fa-1391-4145-a314-3038a11c9d3f"));
 		return true;
 	}
-
 }

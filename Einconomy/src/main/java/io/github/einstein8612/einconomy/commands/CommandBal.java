@@ -19,7 +19,7 @@ public class CommandBal implements CommandExecutor {
 			Player player = (Player) sender;
 			if (args.length == 0) {
 				if (Common.checkAccount(player)) {
-					Common.tellPlaceholder(player, plugin.getConfig().getString("viewBalance"));
+					Common.tellPlaceholder(player, null, plugin.getConfig().getString("viewBalance"));
 				} else {
 					plugin.getDm().getEco().set("Players." + player.getUniqueId().toString(), 0);
 					Common.tell(player, Common.resolvePlaceholders(player, null, plugin.getConfig().getString("viewBalance")));
@@ -27,7 +27,7 @@ public class CommandBal implements CommandExecutor {
 			} else {
 				Player target = Common.getPlayer(args[0]);
 				if (Common.checkAccount(target)) {
-					Common.tellPlaceholder(player, plugin.getConfig().getString("viewBalanceOthers"));
+					Common.tellPlaceholder(player, target, plugin.getConfig().getString("viewBalanceOthers"));
 				} else {
 					plugin.getDm().getEco().set("Players." + target.getUniqueId().toString(), 0);
 					Common.tell(player, Common.resolvePlaceholders(player, target, plugin.getConfig().getString("viewBalanceOthers")));

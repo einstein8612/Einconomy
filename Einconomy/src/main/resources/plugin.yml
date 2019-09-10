@@ -1,5 +1,5 @@
 name: Einconomy
-api-version: 1.14
+api-version: 1.13
 version: 1.0
 softdepend: [Vault]
 description: Eco plugin by einstein8612

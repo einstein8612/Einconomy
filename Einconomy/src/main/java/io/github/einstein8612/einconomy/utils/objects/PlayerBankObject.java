@@ -29,7 +29,6 @@ public class PlayerBankObject implements Comparable<PlayerBankObject> {
     	} else {
     		return "Unavailable";
     	}
-        
     }
 
     public String getUuid() {

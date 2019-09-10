@@ -1,5 +1,6 @@
 package io.github.einstein8612.einconomy;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import org.bukkit.Bukkit;
@@ -49,6 +50,7 @@ public class Einconomy extends JavaPlugin {
 		}
 		
 		//-----------
+		
 		getCommand("bal").setExecutor(new CommandBal());
 		getCommand("pay").setExecutor(new CommandPay());
 		getCommand("eco").setExecutor(new CommandEco());

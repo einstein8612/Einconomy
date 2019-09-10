@@ -43,8 +43,8 @@ public class Common {
 		player.sendMessage(colorize(message));
 	}
 
-	public void tellPlaceholder(Player player, String message) {
-		player.sendMessage(colorize(resolvePlaceholders(player, null, message)));
+	public void tellPlaceholder(Player player, Player target, String message) {
+		player.sendMessage(colorize(resolvePlaceholders(player, target, message)));
 	}
 	
 	public void log(String message) {

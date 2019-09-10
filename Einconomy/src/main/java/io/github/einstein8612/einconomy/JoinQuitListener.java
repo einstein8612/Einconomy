@@ -13,7 +13,7 @@ public class JoinQuitListener implements Listener {
 	public void onJoin(PlayerJoinEvent event) {
 		if (!plugin.getDm().getEco().contains("Players." + event.getPlayer().getUniqueId().toString())) {
 			plugin.getDm().getEco().set("Players." + event.getPlayer().getUniqueId().toString(),
-					plugin.getConfig().get("Players." + event.getPlayer().getUniqueId().toString()));
+					plugin.getConfig().get("Economy.startBalance"));
 			return;
 		}
 		return;
